@@ -1,0 +1,19 @@
+syntax = "proto3";
+package searchJava;
+
+option go_package = "github.com/GurbanowGadam/grpc_search;searchJava";
+
+service SearchJava {
+    rpc SearchPeople (SearchText) returns (SearchResult) {}
+  }
+  
+  message SearchText {
+    string text = 1;
+  }
+  
+  message SearchResult {
+    string uuid = 1;
+    string username = 2;
+    string fullname = 3;
+  }
+  
